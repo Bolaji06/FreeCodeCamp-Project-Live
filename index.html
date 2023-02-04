@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreeCodeCamp Project</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <main class="main-container">
+        
+        <section class="palindrome-container">
+            <div class="palindrome-wrapper">
+                <div class="header">
+                    <div class="header-row">
+                        <h1>Palindrome Checker</h1>
+                        <img src="./assets/theme icon.svg" alt="theme icon" class="theme-icon">
+                    </div>
+                </div>
+
+                <div class="action-field">
+                    <label for="word-input">Enter word or phrase:</label>
+                    <input type="text" class="word-input" id="word-input">
+
+                    <div class="btn-action">
+                        <button class="checker">Check</button>
+                        <button class="button-reset">Reset</button>
+                    </div>
+                </div>
+
+                <div class="result-screen">
+                    <label for="display-result">Result</label>
+                    <div class="display">
+                        <h3 class="display-result" id="display-result">
+                        </h3>
+                </div>
+                </div>
+
+                <div class="entered-word-container">
+                    <label for="entered-word">Entered word or phrase</label>
+                    <div class="entered-word-screen display">
+                        <h3 class="entered-word-display display-result">
+                            
+                        </h3>
+                    </div>
+                </div>
+
+                <div class="projects-btns">
+                    <button class="palindrome-btn" disabled>Palindrome</button>
+                    <button class="roman">Roman Numeral</button>
+                    <button class="">Palindrome</button><br>
+                    <button class="">Roman Numeral</button>
+                    <button class="">Palindrome</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="roman-container">
+            <div class="palindrome-wrapper">
+                <div class="header">
+                    <div class="header-row">
+                        <h1>Convert Roman Numeral</h1>
+                        <img src="./assets/theme icon.svg" alt="theme icon" class="theme-icon theme-roman">
+                    </div>
+                </div>
+
+                <div class="action-field">
+                    <label for="number">Number:</label>
+                    <input type="text" class="word-input" id="number" onChange="removeError()">
+                    <p class="error-msg"></p>
+
+                    <div class="btn-action">
+                        <button class="convert">Convert</button>
+                        <button class="button-reset reset-roman">Reset</button>
+                    </div>
+                </div>
+
+                <div class="result-screen">
+                    <label for="display-result-roman">Result</label>
+                    <div class="display">
+                        <h3 class="display-result" id="display-result-roman">
+                           
+                        </h3>
+                    </div>
+                </div>
+
+                <div class="entered-word-container">
+                    <label for="entered-word">Entered Number</label>
+                    <div class="entered-word-screen display">
+                        <h3 class="entered-word-display-roman display-result">
+                            
+                        </h3>
+                    </div>
+                </div>
+
+               <div class="projects-btns">
+                    <button class="palindrome-btn pali">Palindrome</button>
+                    <button class="roman-btn" disabled>Roman Numeral</button>
+                    <button class="">Palindrome</button><br>
+                    <button class="">Roman Numeral</button>
+                    <button class="">Palindrome</button>
+                </div>
+            </div>
+        </section>
+
+        
+        
+    </main>
+     
+    <script src="/index.js"></script>
+    <script src="/palindrome.js"></script>
+    <script src="/roman.js"></script>
+</body>
+</html>
