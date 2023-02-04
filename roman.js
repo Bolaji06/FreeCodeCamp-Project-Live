@@ -83,16 +83,3 @@ resetBtnRoman.addEventListener('click',()=>{
     clearInputRoman();
 });
 convertBtn.addEventListener('click', convertRoman);
-
-
-let arrNum = [1, 3, 5, 3, 6, 5, 9, 3, 'JOSH'];
-let mySlice = arrNum.slice(3, arrNum.length);
-//console.log(mySlice);
-
-let days = ['Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-//let mySplice = days.splice(2);
-//console.log(mySplice);
-//console.log(days.length);
-//console.log(days.entries(day => days[day]))
-let ent = days.find(day => day === 'Monday' ? 'Yes': 'No');
-console.log(ent);
