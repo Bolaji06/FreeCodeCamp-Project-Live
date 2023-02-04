@@ -27,7 +27,6 @@ RomanBtn.addEventListener('click', ()=>{
    
 });
 palindromeBtn.addEventListener('click', ()=>{
-    console.log('palbtn')
     romanContainer.classList.remove('active-roman');
     palindromeContainer.classList.add('active-palindrome');
 })
