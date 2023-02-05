@@ -174,4 +174,10 @@ button:hover{
 .roman-container .palindrome-btn{
     background-color: orange;
 }
+@media(max-width: 800px){
+    .palindrome-container,
+    .roman-container{
+        padding: 12px 20px;
+    }
+}
 
