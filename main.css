@@ -54,7 +54,7 @@ body{
 .palindrome-container,
 .roman-container{
     position: absolute;
-    top: 350px;
+    top: 330px;
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
@@ -93,6 +93,7 @@ body{
 .theme-icon{
     width: 25px;
     cursor: pointer;
+    align-self: flex-start;
 }
 .action-field{
     margin-bottom: 20px;
@@ -137,8 +138,9 @@ button:hover{
 }
 .display{
     background-color: rgb(238, 238, 238);
-    padding: 30px;
+    padding: 20px;
     margin-bottom: 20px;
+    overflow: hidden;
 }
 .display-result{
     color: rgb(73, 73, 73);
