@@ -6,8 +6,8 @@
 
 body{
     font-family: Arial, Helvetica, sans-serif;
-    height: 100vh;
     overflow: hidden;
+    height: 100vh;
 }
 .dark-theme{
     background-color: rgb(5, 3, 14);
@@ -55,10 +55,10 @@ body{
 .palindrome-container,
 .roman-container{
     position: absolute;
-    top: 50%;
+    top: 350px;
     left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60%;
+    transform: translateX(-50%);
+    width: 90%;
     border-radius: 5px;
     padding: 20px 40px;
     border: 1px solid gray;
