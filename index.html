@@ -49,7 +49,7 @@
                 <div class="projects-btns">
                     <button class="palindrome-btn" disabled>Palindrome</button>
                     <button class="roman">Roman</button>
-                    <button class="">cipher</button><br>
+                    <button class="cipher-btn">cipher</button>
                     <button class="">Roman Numeral</button>
                     <button class="">Palindrome</button>
                 </div>
@@ -97,12 +97,62 @@
                <div class="projects-btns">
                     <button class="palindrome-btn pali">Palindrome</button>
                     <button class="roman-btn" disabled>Roman</button>
-                    <button class="">cipher</button><br>
+                    <button class="cipher-btn cipher-roman">cipher</button>
                     <button class="">Roman Numeral</button>
                     <button class="">Palindrome</button>
                 </div>
             </div>
         </section>
+
+        <section class="cipher-container">
+            <div class="palindrome-wrapper">
+                <div class="header">
+                    <div class="header-row">
+                        <h1>Ceaser Cipher</h1>
+                        <img src="./assets/theme icon.svg" alt="theme icon" 
+                        class="theme-icon theme-roman icon-cipher">
+                    </div>
+                </div>
+
+                <div class="action-field">
+                    <label for="number">Enter Text:</label>
+                    <input type="text" class="word-input" id="cipher-input" onChange="removeError()">
+                   
+
+                    <div class="btn-action">
+                        <button class="decode-btn">Decode</button>
+                        <button class="button-reset reset-cipher">Reset</button>
+                    </div>
+                </div>
+
+                <div class="result-screen">
+                    <label for="display-result-roman">Result</label>
+                    <div class="display">
+                        <h3 class="display-result" id="display-result-cipher">
+                           
+                        </h3>
+                    </div>
+                </div>
+
+                <div class="entered-word-container">
+                    <label for="entered-word">Entered Number</label>
+                    <div class="entered-word-screen display">
+                        <h3 class="entered-word-display-cipher display-result">
+                            
+                        </h3>
+                    </div>
+                </div>
+
+               <div class="projects-btns">
+                    <button class="palindrome-btn pali cipher-palindrome">Palindrome</button>
+                    <button class="roman rc">Roman</button>
+                    <button class="cipher-btn" disabled>cipher</button>
+                    <button class="">Roman Numeral</button>
+                    <button class="">Palindrome</button>
+                </div>
+            </div>
+        </section>
+
 
         
         
@@ -111,5 +161,6 @@
     <script src="index.js"></script>
     <script src="palindrome.js"></script>
     <script src="roman.js"></script>
+    <script src="ceasar-cipher.js"></script>
 </body>
 </html>
