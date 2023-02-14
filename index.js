@@ -11,6 +11,48 @@ const header = document.querySelector('h1');
 const rc = document.querySelector('.rc');
 const cipherRoman = document.querySelector('.cipher-roman');
 const cipherPalindrome = document.querySelector('.cipher-palindrome');
+const phoneBtn = document.querySelector('.phone-btn');
+const phoneContainer = document.querySelector('.phone-container');
+const phoneRoman = document.querySelector('.phone-roman');
+const phoneCipher = document.querySelector('.phone-cipher');
+const phonePalindrome = document.querySelector('.phone-palindrome');
+const phoneRomanBtn = document.querySelector('.phone-roman-btn');
+const phoneCipherBtn = document.querySelector('.phone-cipher-btn');
+
+
+phoneCipherBtn.addEventListener('click', ()=>{
+    phoneContainer.classList.remove('active-phone');
+    cipherContainer.classList.add('active-cipher');
+})
+
+phoneRomanBtn.addEventListener('click', ()=>{
+    phoneContainer.classList.remove('active-phone');
+    romanContainer.classList.add('active-roman');
+})
+
+phonePalindrome.addEventListener('click', ()=>{
+    phoneContainer.classList.remove('active-phone');
+    palindromeContainer.classList.add('active-palindrome');
+})
+
+phoneRoman.addEventListener('click', ()=>{
+    phoneContainer.classList.add('active-phone');
+    romanContainer.classList.remove('active-roman');
+})
+
+phoneCipher.addEventListener('click', ()=>{
+    phoneContainer.classList.add('active-phone');
+    cipherContainer.classList.remove('active-cipher')
+})
+
+phoneBtn.addEventListener('click', ()=>{
+    phoneContainer.classList.add('active-phone');
+    palindromeContainer.classList.remove('active-palindrome');
+    romanContainer.classList.remove('active-roman');
+    cipherContainer.classList.remove('active-cipher');
+    
+
+});
 
 
 themeIcon.addEventListener('click', ()=>{
@@ -21,7 +63,7 @@ window.addEventListener('load', ()=>{
 })
  
 RomanBtn.addEventListener('click', ()=>{
-    console.log('roman');
+    
     romanContainer.classList.add('active-roman');
     palindromeContainer.classList.remove('active-palindrome');
     cipherContainer.classList.remove('active-cipher');
@@ -52,14 +94,11 @@ cipherBtn.addEventListener('click', ()=>{
     palindromeContainer.classList.remove('active-palindrome');
     romanContainer.classList.remove('active-roman');
     
-    console.log('cipher')
 });
 cipherRoman.addEventListener('click', ()=>{
     cipherContainer.classList.add('active-cipher');
     palindromeContainer.classList.remove('active-palindrome');
     romanContainer.classList.remove('active-roman');
-    
-    console.log('cipher')
 });
 
 

@@ -42,7 +42,7 @@ const CHARACTER_CHART = {
 
 function rot13(str){
         let convertedString = '';
-        if (/^[a-zA-Z?/.,-_@ ]*$/.test(str)){
+        if (/^[a-zA-Z?/.,-_@! ]*$/.test(str)){
             for (let i = 0; i < str.length; i++){
                 const character = str[i].toUpperCase();
                 let convertedCharacter = '';
@@ -55,7 +55,7 @@ function rot13(str){
                 }
                 convertedString += convertedCharacter;
             }
-        }    
+        }  
         
     return (cipherResult.textContent = convertedString);
 }

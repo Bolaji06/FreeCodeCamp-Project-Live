@@ -50,7 +50,7 @@
                     <button class="palindrome-btn" disabled>Palindrome</button>
                     <button class="roman">Roman</button>
                     <button class="cipher-btn">cipher</button>
-                    <button class="">Roman Numeral</button>
+                    <button class="phone-btn">US Phone</button>
                     <button class="">Palindrome</button>
                 </div>
             </div>
@@ -97,8 +97,8 @@
                <div class="projects-btns">
                     <button class="palindrome-btn pali">Palindrome</button>
                     <button class="roman-btn" disabled>Roman</button>
-                    <button class="cipher-btn cipher-roman">cipher</button>
-                    <button class="">Roman Numeral</button>
+                    <button class="cipher-btn cipher-roman ">cipher</button>
+                    <button class="phone-btn phone-roman">US Phone</button>
                     <button class="">Palindrome</button>
                 </div>
             </div>
@@ -147,11 +147,63 @@
                     <button class="palindrome-btn pali cipher-palindrome">Palindrome</button>
                     <button class="roman rc">Roman</button>
                     <button class="cipher-btn" disabled>cipher</button>
-                    <button class="">Roman Numeral</button>
+                    <button class="phone-btn phone-cipher">US Phone</button>
                     <button class="">Palindrome</button>
                 </div>
             </div>
         </section>
+
+        <section class="phone-container">
+            <div class="palindrome-wrapper">
+                <div class="header">
+                    <div class="header-row">
+                        <h1>US Phone Verification</h1>
+                        <img src="./assets/theme icon.svg" alt="theme icon" 
+                        class="theme-icon phone-theme">
+                    </div>
+                </div>
+
+                <div class="action-field">
+                    <label for="number">Enter Phone Number:</label>
+                    <input type="text" class="word-input" id="phone-input" onChange="removeError()">
+                    <p class="phone-error"></p>
+                   
+
+                    <div class="btn-action">
+                        <button class="phone-check">Check</button>
+                        <button class="button-reset reset-phone">Reset</button>
+                    </div>
+                </div>
+
+                <div class="result-screen">
+                    <label for="display-result-roman">Result</label>
+                    <div class="display">
+                        <h3 class="display-result" id="display-result-phone">
+                           
+                        </h3>
+                    </div>
+                </div>
+
+                <div class="entered-word-container">
+                    <label for="entered-word">Entered Number</label>
+                    <div class="entered-word-screen display">
+                        <h3 class="entered-word-phone display-result">
+                            
+                        </h3>
+                    </div>
+                </div>
+
+               <div class="projects-btns">
+                    <button class="palindrome-btn pali cipher-palindrome phone-palindrome">
+                        Palindrome</button>
+                    <button class="roman rc phone-roman-btn">Roman</button>
+                    <button class="cipher-btn phone-cipher-btn">cipher</button>
+                    <button class="phone-btn" disabled>US Phone</button>
+                    <button class="">Palindrome</button>
+                </div>
+            </div>
+        </section>
+
 
 
         
@@ -162,5 +214,6 @@
     <script src="palindrome.js"></script>
     <script src="roman.js"></script>
     <script src="ceasar-cipher.js"></script>
+    <script src="phone-no.js"></script>
 </body>
 </html>
