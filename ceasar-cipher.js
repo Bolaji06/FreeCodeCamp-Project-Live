@@ -67,9 +67,9 @@ decodeBtn.addEventListener('click', ()=>{
     
 });
 function clearInput(){
-    let resetInput = document.querySelector('#cipher-input');
-    if (resetInput.value != ''){
-       resetInput.value = '';
+    
+    if (cipherInput.value != ''){
+       cipherInput.value = '';
        enteredCipherWord.textContent = '';
        cipherResult.textContent = '';
 

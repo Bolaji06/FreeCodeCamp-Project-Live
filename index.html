@@ -23,6 +23,7 @@
                 <div class="action-field">
                     <label for="word-input">Enter word or phrase:</label>
                     <input type="text" class="word-input" id="word-input">
+                    <p class="error-pal"></p>
 
                     <div class="btn-action">
                         <button class="checker">Check</button>
@@ -42,7 +43,6 @@
                     <label for="entered-word">Entered word or phrase</label>
                     <div class="entered-word-screen display">
                         <h3 class="entered-word-display display-result">
-                            
                         </h3>
                     </div>
                 </div>
@@ -52,7 +52,7 @@
                     <button class="roman">Roman</button>
                     <button class="cipher-btn">cipher</button>
                     <button class="phone-btn">US Phone</button>
-                    <button class="">Palindrome</button>
+                    <button class="cash-reg-btn">Cash Register</button>
                 </div>
             </div>
         </section>
@@ -100,7 +100,7 @@
                     <button class="roman-btn" disabled>Roman</button>
                     <button class="cipher-btn cipher-roman ">cipher</button>
                     <button class="phone-btn phone-roman">US Phone</button>
-                    <button class="">Palindrome</button>
+                    <button class="cash-reg-btn roman-cash">Cash Register</button>
                 </div>
             </div>
         </section>
@@ -147,9 +147,9 @@
                <div class="projects-btns">
                     <button class="palindrome-btn pali cipher-palindrome">Palindrome</button>
                     <button class="roman rc">Roman</button>
-                    <button class="cipher-btn" disabled>cipher</button>
+                    <button class="cipher-btn " disabled>cipher</button>
                     <button class="phone-btn phone-cipher">US Phone</button>
-                    <button class="">Palindrome</button>
+                    <button class="cash-reg-btn cipher-cash">Cash Register</button>
                 </div>
             </div>
         </section>
@@ -200,7 +200,85 @@
                     <button class="roman rc phone-roman-btn">Roman</button>
                     <button class="cipher-btn phone-cipher-btn">cipher</button>
                     <button class="phone-btn" disabled>US Phone</button>
-                    <button class="">Palindrome</button>
+                    <button class="cash-reg-btn phone-cash">Cash Register</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="cash-register-container">
+            <div class="palindrome-wrapper cash-reg-wrapper">
+                <div class="header">
+                    <div class="header-row">
+                        <h1>Cash Register</h1>
+                        <img src="./assets/theme icon.svg" alt="theme icon" 
+                        class="theme-icon cash-theme">
+                    </div>
+                </div>
+
+                <div class="action-field">
+                    <div class="cash-reg-row">
+                        <div class="col-1">
+                            <input type="text" class="word-input" id="cash-input" 
+                            placeholder="Enter cash"onChange="removeError()">
+                            <input type="text" class="word-input" id="price-input"
+                            placeholder="Enter product price" onChange="removeError()">
+                            <p class="cash-error"></p>
+                        </div>
+                        <div class="col-2">
+                            <span>
+                                <p style="color: black; margin-right: 2px;">Avail:</p>
+                                <span class="dollar-sign"></span>
+                                <p class="cid-text">0</p>
+                            </span>
+                            <button class="refund-btn">FUND</button>
+                             <!-- <button class="view-btn"><u>View</u></button>  -->
+                        </div>
+                    </div>
+                   
+
+                    <div class="btn-action">
+                        <button class="phone-check" id="cash-check">Check</button>
+                        <button class="button-reset reset-cash-reg">Reset</button>
+                    </div>
+                </div>
+
+                <div class="result-screen">
+                    <label for="display-result-roman">Status</label>
+                    <div class="display">
+                        <h3 class="display-result" id="display-status">
+                           
+                        </h3>
+                    </div>
+                </div>
+
+                <div class="entered-word-container">
+                    <label for="entered-word">Change</label>
+                    <div class="entered-word-screen display">
+                        <h3 class="display-result" id="display-change">
+                            
+                        </h3>
+                    </div>
+                </div>
+
+               <div class="projects-btns">
+                    <button class="palindrome-btn pali cipher-palindrome
+                     phone-palindrome cash-palindrome">
+                        Palindrome</button>
+                    <button class="roman rc phone-roman-btn cash-roman">Roman</button>
+                    <button class="cipher-btn phone-cipher-btn cash-cipher">cipher</button>
+                    <button class="phone-btn cash-phone">US Phone</button>
+                    <button class="cash-reg-btn" disabled>Cash Register</button>
+                </div>
+                <div class="view-cid-container">
+                    <!-- <p class="cur">Penny</p>
+                                     <p class="cur">Nickel</p>
+                                         <p class="cur">Dime</p>
+                                        <p class="cur">Quater</p>
+                                        <p class="cur">One Dollar</p>
+                                       <p class="cur">Five Dollar</p>
+                                      <p class="cur">Ten Dollar</p>
+                                       <p class="cur">Twenty Dollar</p>
+                                         <p class="cur">One hundred Dollar</p>    -->
                 </div>
             </div>
         </section>
@@ -216,5 +294,7 @@
     <script src="roman.js"></script>
     <script src="ceasar-cipher.js"></script>
     <script src="phone-no.js"></script>
+    <script src="cash-register.js"></script>
+    <script src="sample.js"></script>
 </body>
 </html>

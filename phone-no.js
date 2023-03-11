@@ -42,7 +42,7 @@ function displayValidNumber(){
 }
 function displayInvalidNumber(){
     errorMsgPhone()
-    return displayResultPhone.textContent = 'Invalid U.S Number';
+   return displayResultPhone.textContent = 'Invalid U.S Number';
 }
 function errorMsgPhone(){
     phoneInput.classList.add('error-check');

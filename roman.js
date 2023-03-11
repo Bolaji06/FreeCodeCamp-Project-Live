@@ -1,6 +1,4 @@
 
-
-
 const convertBtn = document.querySelector('.convert');
 const romanResult = document.getElementById('display-result-roman');
 const resetBtnRoman = document.querySelector('.reset-roman');
@@ -68,15 +66,13 @@ function removeError(){
 removeError();
 // Reset or clear input field and display result
 function clearInputRoman(){
-    let getValue = document.getElementById('number');
-    if (getValue.value != ''){
-        getValue.value = '';
+    
+    if (numberInput.value != ''){
+        numberInput.value = '';
     }
     enteredDisplay.textContent = '';
     romanResult.textContent = '';
     
-
-    console.log('reset')
 }
 
 resetBtnRoman.addEventListener('click',()=>{

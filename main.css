@@ -10,7 +10,7 @@ body{
 }
 .dark-theme{
     background-color: rgb(5, 3, 14);
-    color: rgb(216, 216, 216);
+    color: rgb(255, 255, 255);
 }
 .error-check{
     border: 1px solid red;
@@ -21,9 +21,16 @@ body{
 }
 .error-msg,
 .error-cipher,
-.phone-error{
+.phone-error,
+.cash-error{
     color: red;
     margin-top: 6px;
+    font-size: .9rem;
+}
+span{
+    background-color: white;
+    color: white;
+    padding: 1px 2px;
 }
 @keyframes animation{
     0%{
@@ -56,7 +63,8 @@ body{
 .palindrome-container,
 .roman-container,
 .cipher-container,
-.phone-container{
+.phone-container,
+.cash-register-container{
     position: absolute;
     top: 330px;
     left: 50%;
@@ -71,14 +79,16 @@ body{
 .palindrome-container,
 .roman-container,
 .cipher-container,
-.phone-container{
+.phone-container,
+.cash-register-container{
     opacity: 0;
     pointer-events: none;
 }
 .palindrome-container.active-palindrome,
 .roman-container.active-roman,
 .cipher-container.active-cipher,
-.phone-container.active-phone{
+.phone-container.active-phone,
+.cash-register-container.active-register{
     opacity: 1;
     pointer-events: auto;
     transform: translate(-50%, -50%) scale(1);
@@ -152,7 +162,8 @@ button:hover{
 .display-result{
     color: rgb(73, 73, 73);
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1rem;
+    text-transform: uppercase;
 }
 .entered-word-container{
     margin-top: 20px;
@@ -176,21 +187,24 @@ button:hover{
 }
 .palindrome-container .cipher-btn,
 .roman-container .cipher-btn,
-.phone-container .cipher-btn{
-    background-color: rgb(7, 145, 145);
+.phone-container .cipher-btn,
+.cash-register-container .cipher-btn{
+    background-color: rgb(23, 85, 85)
 }
 
 .roman-container .roman-btn:disabled,
 .roman-container .roman-btn:disabled:hover,
 .cipher-container .cipher-btn:disabled,
 .cipher-container .cipher-btn:hover,
-.phone-container .phone-btn:disabled{
+.phone-container .phone-btn:disabled,
+.cash-register-container .cash-reg-btn:disabled{
     background-color: rgb(190, 190, 190);
     transform: scale(1);
 }
 .roman-container .palindrome-btn,
 .cipher-container .palindrome-btn,
-.phone-container .palindrome-btn{
+.phone-container .palindrome-btn,
+.cash-register-container .palindrome-btn{
     background-color: orange;
 }
 .cipher-container button{
@@ -199,11 +213,121 @@ button:hover{
 .phone-btn{
     background-color: rgb(20, 100, 220);
 }
+.cash-reg-btn{
+    background-color: rgb(177, 33, 112);
+    cursor: pointer;
+}
+#price-input,
+#cash-input{
+    width: 60%;
+    padding: 5px;
+    font-size: 1rem;
+}
+#cash-input{
+    margin-top: 6px;
+}
+.cash-reg-row{
+    display: flex;
+    justify-content: space-between;
+}
+span{
+    display: flex;
+    color: gray;
+    gap: 1px;
+}
+.refund-btn{
+    padding: 6px 18px;
+    font-size: .9rem;
+    margin-top: 8px;
+    background-color: rgb(14, 165, 46);
+    
+}
+.view-btn{
+    background-color: transparent;
+    color: rgb(29, 181, 241);
+    text-transform: capitalize;
+    font-size: .9rem;
+}
+.cid-text{
+    align-self: flex-start;
+    color: black;
+}
+.cash-reg-wrapper{
+    position: relative;
+}
+.view-cid-container{
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(158, 158, 158);
+    border-radius: 5px;
+    width: 300px;
+    animation: oomIn ease-in 1s;
+    
+}
+.id-pop-up{
+    animation: zoomIn ease 1s;
+}
+.view-cid-container.active-cid{
+
+
+}
+@keyframes zoomIn {
+    0%{
+        transform: scale(1, 1);
+    }
+    50%{
+        transform: scale(1.5, 1.5);
+    }
+    100%{
+        transform: scale(1, 1);
+    }
+    
+}
+.header-popup{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    padding-bottom: 0;
+}
+.pop-up-text{
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.close-popup-btn{
+    width: 30px;
+    cursor: pointer;
+}
+.cid-list-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+}
+.cur,
+.amount{
+    padding: 2px;
+}
+.amount{
+    font-weight: 600;
+    color: rgb(46, 46, 46);
+}
+#display-change,
+#display-status{
+    font-size: 1rem;
+}
+
+
+
 @media(max-width: 800px){
     .palindrome-container,
     .roman-container,
     .cipher-container,
-    .phone-container{
+    .phone-container,
+    .cash-register-container{
         padding: 12px 20px;
     }
 }
