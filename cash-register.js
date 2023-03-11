@@ -189,7 +189,7 @@ function createCIDPopUp(){
         <div class="cid-pop-up">
         <div class="header-popup">
          <h3 class="pop-up-text">Cash in drawer</h3>
-         <img src="/assets/icons8-close-window-48.png" 
+         <img src="assets/icons8-close-window-48.png" 
          alt="close popup buttton" class="close-popup-btn"
          onClick="document.querySelector('.cid-pop-up').style.display = 'none'">
         </div>
