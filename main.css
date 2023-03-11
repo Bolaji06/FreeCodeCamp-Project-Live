@@ -27,7 +27,7 @@ body{
     margin-top: 6px;
     font-size: .9rem;
 }
-span{
+.acc{
     background-color: white;
     color: white;
     padding: 1px 2px;
@@ -230,10 +230,11 @@ button:hover{
     display: flex;
     justify-content: space-between;
 }
-span{
+.acc{
     display: flex;
-    color: gray;
+    color: rgb(197, 36, 36);
     gap: 1px;
+    margin-top: 4px;
 }
 .refund-btn{
     padding: 6px 18px;
