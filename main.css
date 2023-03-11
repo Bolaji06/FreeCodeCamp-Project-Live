@@ -319,6 +319,10 @@ span{
 #display-status{
     font-size: 1rem;
 }
+#display-change{
+    scrollbar-width: thin;
+    overflow-x: auto;
+}
 
 
 
